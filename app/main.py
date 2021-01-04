@@ -1,9 +1,9 @@
-from pathlib import Path
-from dotenv import load_dotenv
 from flask import Flask
-# Environment vars
-load_dotenv(dotenv_path=Path('.') / '.env_dev')
 from routes import add_predict, add_fit
+# Environment vars
+# from pathlib import Path
+# from dotenv import load_dotenv
+# load_dotenv(dotenv_path=Path('.') / '.env_dev')
 
 # Application endpoints collection
 app = Flask(__name__)

@@ -1,0 +1,17 @@
+version: '3'
+services:
+
+  web_app:
+    build:
+      context: ./Docker
+      dockerfile: Dockerfile
+    env_file:
+      - ./Docker/.env_prod
+    ports:
+      - 5000:5000
+    volumes:
+      - ./app:/app
+      - ./data:/data
+      - ./models:/models
+    network_mode: host
+    command: bash -c "python3 app/main.py"
