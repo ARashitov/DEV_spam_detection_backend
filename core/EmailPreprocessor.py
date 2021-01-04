@@ -1,5 +1,3 @@
-import os
-import pandas as pd
 import re
 from nltk.stem import PorterStemmer
 
@@ -51,7 +49,7 @@ class EmailPreprocessor:
         """
             stores into word_vec presence in vocabulary
             Example:
-                [0, 1...1] where amount == lenght of vocabulary 
+                [0, 1...1] where amount == lenght of vocabulary
         """
         email_content = self.email_content
         vocab = self.vocabulary.copy()
