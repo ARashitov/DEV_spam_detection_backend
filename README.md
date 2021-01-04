@@ -14,3 +14,12 @@ I was curious about deployment of model as web app with automated model training
 * Wrap into Docker container
 * Deploy on AWS
 * Interact using Jupyter
+
+## About
+This project is classic spam detecetion NLP task. prediction is is_spam.
+
+## Guideline
+
+* Start from [prerequisites]()
+* Then go to [web app spin up]()
+* And Lastly checkout [API documentation]() & [Jupyter Example]()
