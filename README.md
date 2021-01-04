@@ -20,6 +20,6 @@ This project is classic spam detecetion NLP task. prediction is is_spam.
 
 ## Guideline
 
-* Start from [prerequisites]()
-* Then go to [web app spin up]()
-* And Lastly checkout [API documentation]() & [Jupyter Example]()
+* Start from [prerequisites](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Prerequisites.md)
+* Then go to [web app spin up](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/WebAppSpinUp.md)
+* And Lastly checkout [API documentation](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/API.md) & [Jupyter Example](https://github.com/AtmosOne/FlaskExploration/blob/main/Example/Example.ipynb)
