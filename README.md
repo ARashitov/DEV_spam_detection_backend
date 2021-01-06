@@ -6,7 +6,7 @@ This is hobby repository created to explore Flask framework for model deployment
 
 ## Goal
 
-I was curious about deployment of model as web app with automated model training and predicting, where model will be wrapped into Flask and can be utilized using `POST` method.
+I was curious about deployment of ML model as api with automated model training and predicting, where model will be wrapped into Flask and can be utilized using `POST` method.
 
 * Automate model training
 * Wrap into Flask APP
