@@ -1,8 +1,11 @@
 # FlaskExploration
 
-This is hobby repository created to explore Flask framework for model deployment
+This is hobby repository created to explore Flask framework as API creation tool for model deployment
 
-[Original repository](https://github.com/maglili/spam-filter).
+## About
+
+This project is classic spam detecetion NLP task.
+You send request with email content and receive prediction if message is spam or not.
 
 ## Goal
 
@@ -14,9 +17,6 @@ I was curious about deployment of ML model as api with automated model training 
 * Wrap into Docker container
 * Deploy on AWS
 * Interact using Jupyter
-
-## About
-This project is classic spam detecetion NLP task. prediction is is_spam.
 
 ## Guideline
 
