@@ -1,13 +1,26 @@
-# API endpoints:
+# **API endpoints**
 
-## **/fit** (GET)
+## GET `/fit`
 
-Performs model training and overrides previous one. Uses train and test matrix in data/ project dir.
+Updates model within docker container by using data present inside, so no any parameters are required!
 
-## **/predict** (POST)
+## POST `/predict`
 
-Performs prediction: if email message is spam?
+Spam prediction endpoint
 
-### *NOTE*: Requires field `email_content` in message body
+### **Request body**
 
-No any additinal parameters!!!
+```Python
+{
+    'email_content': 'Hello this is the test message!'
+}
+```
+
+### **Response body**
+
+```Python
+{
+    'email_content': 'Hello this is the test message!',
+    'is_spam': False
+}
+```
