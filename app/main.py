@@ -2,9 +2,9 @@ import os
 from flask import Flask
 from flask_restful import Api
 # Environment vars
-from pathlib import Path
-from dotenv import load_dotenv
-load_dotenv(dotenv_path=Path('/home/atmos/Hobby/FlaskExploration/Docker/') / '.env_dev')
+# from pathlib import Path
+# from dotenv import load_dotenv
+# load_dotenv(dotenv_path=Path('/home/atmos/Hobby/FlaskExploration/Docker/') / '.env_dev')
 from Resources import Predict, Fit
 
 ACTIVATE_FIT = os.environ['ACTIVATE_FIT'] == 'True'
