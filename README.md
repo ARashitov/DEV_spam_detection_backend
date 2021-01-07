@@ -1,4 +1,4 @@
-# FlaskExploration
+# MLmodelDeployment_Backend
 
 This is hobby repository created to explore Flask framework as API creation tool for model deployment
 
@@ -26,4 +26,6 @@ I was curious about deployment of ML model as api with automated model training 
 
 * Start from [prerequisites](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Prerequisites.md)
 * Then go to [backend deploy](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Backend_deploy.md)
-* And Lastly checkout [API documentation](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/API.md) & [Jupyter Example](https://github.com/AtmosOne/FlaskExploration/blob/main/Example/Example.ipynb)
+* Usage:
+  * And Lastly checkout [API documentation](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/API.md) & [Jupyter Example](https://github.com/AtmosOne/FlaskExploration/blob/main/Example/Example.ipynb)
+  * You can deploy [frontend](https://github.com/AtmosOne/MLmodelDeployment_Backend) container of this project
