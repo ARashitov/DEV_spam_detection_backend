@@ -25,5 +25,5 @@ I was curious about deployment of ML model as api with automated model training 
 ## Guideline
 
 * Start from [prerequisites](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Prerequisites.md)
-* Then go to [web app spin up](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/WebAppSpinUp.md)
+* Then go to [backend deploy](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Backend_deploy.md)
 * And Lastly checkout [API documentation](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/API.md) & [Jupyter Example](https://github.com/AtmosOne/FlaskExploration/blob/main/Example/Example.ipynb)

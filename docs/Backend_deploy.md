@@ -9,6 +9,8 @@ From project directory (../FlaskExploration/) hit the next commands:
 
 ![start](pictures/web_server_start.png)
 
+Endpoints will be available under this link: `http://{HOSTNAME}:5000`
+
 ## Stop API docker container
 
 ![stop](pictures/web_server_stop.png)
