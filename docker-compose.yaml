@@ -1,7 +1,7 @@
 version: '3'
 services:
 
-  web_app:
+  spam_detection_backend:
     build:
       context: ./Docker
       dockerfile: Dockerfile
