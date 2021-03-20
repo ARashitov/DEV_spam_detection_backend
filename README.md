@@ -8,7 +8,7 @@ In my machine learning i need some template to quickly push developed model into
 
 ## **Architecture**
 
-![Architecture](diagrams/ProjectDiagrams.png)
+![Architecture](diagrams/Architecture.png)
 
 ## **Tech stack**
 
