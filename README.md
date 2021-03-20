@@ -1,33 +1,72 @@
-# MLmodelDeployment_Backend
+# **SPAM_DETECTION_BACKEND**
 
-This is hobby repository created to explore Flask framework as API creation tool for model deployment
+This is hobby project created to explore FastAPI as a framework for organization machine learning model as RESTful service
 
 ## **About**
 
-I was curious about deployment of ML model as api with automated model training and predicting
-
-This project is aimed to predict if email is spam/not spam. For predicting purposes the system uses `SVM` model with `Porter stemmer` and tokenizer at the core. Prediction pipeline is entirely wrapped into `API` providing opportunity to interact.
-
-### Tech stack
-
-* Python3.8.5
-* Docker
-* flask_restful
-* numpy, pandas, scikit-learn, nltk
-
+In my machine learning i need some template to quickly push developed model into production + i wanted to explore FastAPI to introduce it into my technological stack.
 
 ## **Architecture**
 
 ![Architecture](diagrams/ProjectDiagrams.png)
 
-## **Goal**
+## **Tech stack**
 
-, where model will be wrapped into Flask and can be utilized using `POST` method.
+* Python3.8.5
+* Docker & docker-compose
+* FastAPI
+* numpy, pandas, scikit-learn, nltk
 
-## **Deployment guideline**
 
-* Start from installing [prerequisites](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Prerequisites.md)
-* Then go to [backend deployment](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/Backend_deploy.md)
-* Usage:
-  * And Lastly checkout [API documentation](https://github.com/AtmosOne/FlaskExploration/blob/main/docs/API.md) & [Jupyter Example](https://github.com/AtmosOne/FlaskExploration/blob/main/Example/Example.ipynb)
-  * *Optional*: you can deploy [frontend](https://github.com/AtmosOne/MLmodelDeployment_Backend) container of this project
+## **Management guideline**
+
+*NOTE*: Example below is provided on Ubuntu 18.04 LTS
+
+### **Start up guideline**
+
+1. Install prerequisites (Docker & Docker-compose) | If you already installed move to step 3
+```shell
+sudo apt-get update;
+sudo apt-get -y install apt-transport-https ca-certificates gnupg-agent software-properties-common;
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -;
+sudo apt-key fingerprint 0EBFCD88;
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable";
+sudo apt-get update;
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose;
+```
+2. Press **[ENTER]** and insert Y when required
+3. execute `source start.sh` to start application:
+```zsh
+$source start.sh
+Building spam_detection_backend
+Step 1/4 : FROM python:3.8.5
+ ---> 28a4c88cdbbf
+Step 2/4 : COPY ./Requirements.txt ./
+ ---> Using cache
+ ---> 83d71cba91b2
+Step 3/4 : RUN pip3 install -r Requirements.txt
+ ---> Using cache
+ ---> be6d6df743b9
+Step 4/4 : RUN rm Requirements.txt
+ ---> Using cache
+ ---> 81c1725c59fd
+Successfully built 81c1725c59fd
+Successfully tagged spam_detection_backend_spam_detection_backend:latest
+Creating spam_detection_backend_spam_detection_backend_1 ... done
+```
+4. Open in browser http://127.0.0.1:8000/redoc and you will see:
+![image](screenshots/redoc_screen.png)
+5. Now you can send to API requests
+
+### **Shut down guideline**
+
+1. Hit command: `source stop.sh` and you will get:
+```zsh
+$ source stop.sh
+[sudo] password for atmos: 
+Stopping spam_detection_backend_spam_detection_backend_1 ... done
+Removing spam_detection_backend_spam_detection_backend_1 ... done
+```
