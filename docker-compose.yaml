@@ -6,12 +6,12 @@ services:
       context: ./Docker
       dockerfile: Dockerfile
     env_file:
-      - ./Docker/.env_prod
+      - env/.env_prod
     ports:
-      - 5000:5000
+      - 8000:8000
     volumes:
       - ./app:/app
       - ./data:/data
       - ./models:/models
     network_mode: host
-    command: bash -c "python3 app/main.py"
+    command: bash -c "uvicorn app.run:app"
