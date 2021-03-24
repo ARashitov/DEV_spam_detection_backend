@@ -12,11 +12,11 @@ In my machine learning i need some template to quickly push developed model into
 
 ## **Tech stack**
 
-* Python3.8.5
-* Docker & docker-compose
-* FastAPI
-* numpy, pandas, scikit-learn, nltk
-
+* **Language**: Python3.8.5
+* **Infrastructure**: Docker & docker-compose
+* **Web framework**: FastAPI
+* **ML stack**: numpy, pandas, scikit-learn, nltk
+* **Continuous integration**: Github actions
 
 ## **Management guideline**
 
@@ -70,3 +70,11 @@ $ source stop.sh
 Stopping spam_detection_backend_spam_detection_backend_1 ... done
 Removing spam_detection_backend_spam_detection_backend_1 ... done
 ```
+
+### **Continious integration process**
+
+path: `.github/workflows/devops.yaml`
+
+1. Deploy docker container;
+2. Setup test environment;
+3. Exectuion basic functionality & stability tests.
