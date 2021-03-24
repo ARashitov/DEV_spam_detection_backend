@@ -26,8 +26,8 @@ jobs:
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"  
 
-    - name: Display Python version
-      run: python -c "import os; print(os.listdir())"  
+    - name: Deploy API
+      run: bash -c "source start.sh"
     # - name: Install dependencies
     #   run: |
     #     python -m pip install --upgrade pip
