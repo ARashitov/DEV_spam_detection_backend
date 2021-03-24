@@ -10,37 +10,42 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  
+  job_1:
+    name: Setup envrionments & app deployment
+    runs-on: ubuntu-latest  
+  
+    steps:
+  
+      - uses: actions/checkout@v2
+    
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
+      - name: Application deployment
+        run: bash -c "source start.sh & sleep 5"
+
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+      - name: List docker containers
+        run: bash -c "docker ps -a"
+    
+  job_2:
     runs-on: ubuntu-latest
 
     steps:
-  
-    - uses: actions/checkout@v2
-  
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
+      - name: Set up test envrionments
+        run: bash -c "pip3 install -r Docker/Requirements.txt"
 
-    - name: Application deployment
-      run: bash -c "source start.sh & sleep 5"
-  
-    - name: Set up test envrionments
-      run: bash -c "pip3 install -r Docker/Requirements.txt"
+      - name: Test basic functionality
+        run: bash -c "pytest -v --exitfirst tests/test_basic_functionality.py"
 
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-    - name: List docker containers
-      run: bash -c "docker ps -a"
-
-    - name: Test basic functionality
-      run: bash -c "pytest -v --exitfirst tests/test_basic_functionality.py"
-
-    - name: Test stability
-      run: bash -c "pytest -v --exitfirst tests/test_stability.py"
+      - name: Test stability
+        run: bash -c "pytest -v --exitfirst tests/test_stability.py"
