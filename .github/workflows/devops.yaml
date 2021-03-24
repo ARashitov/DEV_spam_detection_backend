@@ -1,0 +1,37 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: SPAM DETECTION BACKEND testing...
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v2
+  
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Application deployment
+      run: bash -c "source start.sh && sleep 5"
+
+    - name: List docker containers
+      run: bash -c "docker ps -a"
+  
+    - name: Set up test envrionments
+      run: bash -c "pip3 install -r Docker/Requirements.txt"
+
+    - name: Test basic functionality
+      run: bash -c "pytest -v --exitfirst tests/test_basic_functionality.py"
+
+    - name: Test stability
+      run: bash -c "pytest -v --exitfirst tests/test_stability.py"

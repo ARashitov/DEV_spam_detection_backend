@@ -2,7 +2,7 @@ import json
 import requests
 
 
-EMAIL_SAMPLE = '/home/atmos/Hobby/SPAM_DETECTION_BACKEND/data/emails/emailSample1.txt'
+EMAIL_SAMPLE = 'data/emails/emailSample1.txt'
 ENDPOINT_URL = 'http://127.0.0.1:8000/predict'
 
 
