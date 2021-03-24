@@ -13,5 +13,4 @@ services:
       - ./app:/app
       - ./data:/data
       - ./models:/models
-    network_mode: host
     command: bash -c "uvicorn app.run:app"
