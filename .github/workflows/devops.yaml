@@ -23,11 +23,12 @@ jobs:
       with:
         python-version: 3.9
 
-    - name: Display Python version
-      run: python -c "import sys; print(sys.version)"  
+    - name: Application deployment
+      run: bash -c "source start.sh & sleep 5"
+  
+    - name: Test basic functionality
+      run: bash -c "pytest -v tests/test_basic_functionality.py"
 
-    - name: Building docker container & deploy
-      run: bash -c "source start.sh"
     # - name: Install dependencies
     #   run: |
     #     python -m pip install --upgrade pip
