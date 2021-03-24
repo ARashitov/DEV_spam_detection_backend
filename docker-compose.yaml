@@ -13,4 +13,4 @@ services:
       - ./app:/app
       - ./data:/data
       - ./models:/models
-    command: bash -c "uvicorn app.run:app"
+    command: bash -c "uvicorn app.run:app --host 0.0.0.0 --port 8000"
