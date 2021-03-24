@@ -22,7 +22,7 @@ jobs:
         python-version: 3.9
 
     - name: Application deployment
-      run: bash -c "source start.sh & sleep 5"
+      run: bash -c "source start.sh && sleep 5"
 
     - name: List docker containers
       run: bash -c "docker ps -a"
