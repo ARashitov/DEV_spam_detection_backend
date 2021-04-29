@@ -2,6 +2,6 @@ version: '3'
 services:
 
   spam_detection_backend:
-    image: spam-detection-backend:0.0.1
+    image: atmosphere4u/spam-detection-backend:0.0.1
     ports:
       - 8000:8000
