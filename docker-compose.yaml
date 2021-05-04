@@ -2,16 +2,6 @@ version: '3'
 services:
 
   spam_detection_backend:
-    build:
-      context: ./Docker
-      dockerfile: Dockerfile
-    env_file:
-      - env/.env_prod
+    image: atmosphere4u/spam-detection-backend:0.0.1
     ports:
       - 8000:8000
-    volumes:
-      - ./app:/app
-      - ./data:/data
-      - ./models:/models
-      - ./tests:/tests
-    command: bash -c "uvicorn app.run:app --host 0.0.0.0 --port 8000"
