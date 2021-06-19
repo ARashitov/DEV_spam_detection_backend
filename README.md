@@ -1,6 +1,6 @@
 # **SPAM_DETECTION_BACKEND**
 
-This is hobby project created to explore FastAPI as a framework for organization machine learning model as RESTful service
+This project is created as baseline for integration ML models into FastAPI as RESTful service.
 
 ## **About**
 
