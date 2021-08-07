@@ -1,4 +1,4 @@
-# **SPAM_DETECTION_BACKEND**
+# **DEV_spam_detection_backend**
 
 This project is created as baseline for integration ML models into FastAPI as RESTful service.
 
